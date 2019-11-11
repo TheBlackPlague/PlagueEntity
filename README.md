@@ -10,6 +10,9 @@ directory. Documentation on how to create a directory is not
 provided. This resources folder must contain the skin, and 
 custom geometry for the custom entity you're trying to spawn.
 
+    Custom geometry and skin can be created using [BlockBench](https://blockbench.net).
+    An example is available in the `example` directory of the repository.
+
     Expected structure:
     ```
     - <Plugin Name>
@@ -22,6 +25,9 @@ custom geometry for the custom entity you're trying to spawn.
   
     If your structure is not similar, you will not be provided any
     help by me in any way.
+    
+- Copy the `PlagueEntity` directory in the project repository to
+your `src` directory.
 
 - Then create an array containing the names and format of these 
 files:
