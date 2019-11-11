@@ -56,7 +56,7 @@ files:
     PE::SpawnPlagueEntity(<Player Instance>, $position, $entityName, $entitySkinPNG, $entityGeometryName, $entityGeometryJSONFile);
     ```
   
-- DeSpawn an entity for player using the API:
+- **[OPTIONAL]** DeSpawn an entity for player using the API:
     ```php
     $entityName = "Skin001"; // Your unique entity name.
     PE::DeSpawnPlagueEntity(<Player Instance>, $entityName);
