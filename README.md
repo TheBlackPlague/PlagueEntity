@@ -1,5 +1,7 @@
 # PlagueEntity
 A general-purpose custom entity API for [PocketMine-MP](https://github.com/pmmp/PocketMine-MP).
+
+![SplashImage](https://i.ibb.co/nLtXTKG/Plague-Entity-Splash-Image.png)
  
 ## Documentation
 This is a very basic guide of spawning your entity using clear 
