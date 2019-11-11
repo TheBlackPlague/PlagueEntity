@@ -27,7 +27,11 @@ custom geometry for the custom entity you're trying to spawn.
     help by me in any way.
     
 - Copy the `PlagueEntity` directory in the project repository to
-your `src` directory.
+your `src` directory. Then import it your class using:
+
+    ```php
+    use PlagueEntity\PE;
+    ```
 
 - Then create an array containing the names and format of these 
 files:
@@ -47,13 +51,13 @@ files:
     $entityGeometryName = "geometry001"; // Your model name inside the JSON.
     $entityGeometryJSONFile = "Geometry001"; // Your JSON file name.
     $position = new Vector3(<int|float>x, <int|float>y, <int|float>z);
-    SpawnPlagueEntity(<Player Instance>, $position, $entityName, $entitySkinPNG, $entityGeometryName, $entityGeometryJSONFile);
+    PE::SpawnPlagueEntity(<Player Instance>, $position, $entityName, $entitySkinPNG, $entityGeometryName, $entityGeometryJSONFile);
     ```
   
 - DeSpawn an entity for player using the API:
     ```php
     $entityName = "Skin001"; // Your unique entity name.
-    DeSpawnPlagueEntity(<Player Instance>, $entityName);
+    PE::DeSpawnPlagueEntity(<Player Instance>, $entityName);
     ```
   
 It is that simple. If you use this API in your server, please
