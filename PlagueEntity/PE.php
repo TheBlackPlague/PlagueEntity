@@ -66,9 +66,9 @@ class PE {
         $image = imagecreatefrompng($path);
         $skinData = "";
         $sizeY = (int)getimagesize($path)[1]; // Allows different sizes.
-        $sizeZ = (int)getimagesize($path)[0]; 
+        $sizeX = (int)getimagesize($path)[0]; 
         for ($y = 0; $y < $sizeY; $y++) {
-            for ($x = 0; $x < $sizeZ; $x++) {
+            for ($x = 0; $x < $sizeX; $x++) {
                 // Convert Image Pixel to RGBA
                 $colorAt = imagecolorat($image, $x, $y);
                 $a = ((~((int)($colorAt >> 24))) << 1) & 0xff;
