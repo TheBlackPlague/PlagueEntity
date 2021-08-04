@@ -65,9 +65,10 @@ class PE {
         $path = self::$pluginBase->getDataFolder() . $entitySkinPNG . ".png";
         $image = imagecreatefrompng($path);
         $skinData = "";
-        $size = (int)getimagesize($path)[1];
-        for ($y = 0; $y < $size; $y++) {
-            for ($x = 0; $x < 64; $x++) {
+        $sizeY = (int)getimagesize($path)[1]; // Allows different sizes.
+        $sizeX = (int)getimagesize($path)[0]; 
+        for ($y = 0; $y < $sizeY; $y++) {
+            for ($x = 0; $x < $sizeX; $x++) {
                 // Convert Image Pixel to RGBA
                 $colorAt = imagecolorat($image, $x, $y);
                 $a = ((~((int)($colorAt >> 24))) << 1) & 0xff;
@@ -118,7 +119,7 @@ class PE {
             return;
         }
         if (self::$plagueEntity[$player->getName() . $entityName] != null) {
-            self::$plagueEntity[$player->getName() . $entityName]->kill();
+            self::$plagueEntity[$player->getName() . $entityName]->close(); // Close the entity rather than killing it.
             self::$plagueEntity[$player->getName() . $entityName] = null;
             return;
         }
